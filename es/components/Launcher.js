@@ -55,10 +55,11 @@ var Launcher = function (_Component) {
 
   Launcher.prototype.render = function render() {
     var isOpen = this.props.hasOwnProperty('isOpen') ? this.props.isOpen : this.state.isOpen;
-    var classList = ['sc-launcher', isOpen ? 'opened' : ''];
+    var classList = ['sc-launcher', isOpen ? 'opened' : '', this.props.isFullscreen ? 'fullscreen' : 'smallscreen'];
+    var classListLauncher = [this.props.isFullscreen ? 'fullscreen' : 'smallscreen'];
     return React.createElement(
       'div',
-      { id: 'sc-launcher' },
+      { id: 'sc-launcher', className: classListLauncher.join(' ') },
       React.createElement(
         'div',
         { className: classList.join(' '), onClick: this.handleClick.bind(this) },
@@ -100,12 +101,14 @@ Launcher.propTypes = process.env.NODE_ENV !== "production" ? {
   handleClick: PropTypes.func,
   messageList: PropTypes.arrayOf(PropTypes.object),
   mute: PropTypes.bool,
-  showEmoji: PropTypes.bool
+  showEmoji: PropTypes.bool,
+  isFullscreen: PropTypes.bool
 } : {};
 
 Launcher.defaultProps = {
   newMessagesCount: 0,
-  showEmoji: true
+  showEmoji: true,
+  isFullscreen: true
 };
 
 export default Launcher;

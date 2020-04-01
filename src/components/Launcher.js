@@ -44,9 +44,13 @@ class Launcher extends Component {
     const classList = [
       'sc-launcher',
       (isOpen ? 'opened' : ''),
+      (this.props.isFullscreen ? 'fullscreen' : 'smallscreen')
+    ];
+    const classListLauncher = [
+      (this.props.isFullscreen ? 'fullscreen' : 'smallscreen')
     ];
     return (
-      <div id="sc-launcher">
+      <div id="sc-launcher" className={classListLauncher.join(' ')}>
         <div className={classList.join(' ')} onClick={this.handleClick.bind(this)}>
           <MessageCount count={this.props.newMessagesCount} isOpen={isOpen} />
           <img className={'sc-open-icon'} src={launcherIconActive} />
@@ -84,11 +88,13 @@ Launcher.propTypes = {
   messageList: PropTypes.arrayOf(PropTypes.object),
   mute: PropTypes.bool,
   showEmoji: PropTypes.bool,
+  isFullscreen: PropTypes.bool,
 };
 
 Launcher.defaultProps = {
   newMessagesCount: 0,
-  showEmoji: true
+  showEmoji: true,
+  isFullscreen: true
 };
 
 export default Launcher;

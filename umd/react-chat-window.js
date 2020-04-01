@@ -15384,10 +15384,11 @@ var Launcher_Launcher = function (_Component) {
 
   Launcher.prototype.render = function render() {
     var isOpen = this.props.hasOwnProperty('isOpen') ? this.props.isOpen : this.state.isOpen;
-    var classList = ['sc-launcher', isOpen ? 'opened' : ''];
+    var classList = ['sc-launcher', isOpen ? 'opened' : '', this.props.isFullscreen ? 'fullscreen' : 'smallscreen'];
+    var classListLauncher = [this.props.isFullscreen ? 'fullscreen' : 'smallscreen'];
     return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
       'div',
-      { id: 'sc-launcher' },
+      { id: 'sc-launcher', className: classListLauncher.join(' ') },
       external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(
         'div',
         { className: classList.join(' '), onClick: this.handleClick.bind(this) },
@@ -15429,12 +15430,14 @@ Launcher_Launcher.propTypes = {
   handleClick: prop_types_default.a.func,
   messageList: prop_types_default.a.arrayOf(prop_types_default.a.object),
   mute: prop_types_default.a.bool,
-  showEmoji: prop_types_default.a.bool
+  showEmoji: prop_types_default.a.bool,
+  isFullscreen: prop_types_default.a.bool
 };
 
 Launcher_Launcher.defaultProps = {
   newMessagesCount: 0,
-  showEmoji: true
+  showEmoji: true,
+  isFullscreen: true
 };
 
 /* harmony default export */ var components_Launcher = (Launcher_Launcher);
