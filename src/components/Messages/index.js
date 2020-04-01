@@ -3,12 +3,15 @@ import TextMessage from './TextMessage';
 import EmojiMessage from './EmojiMessage';
 import FileMessage from './FileMessage';
 import chatIconUrl from './../../assets/chat-icon.svg';
+import MarkdownMessage from './MarkdownMessage';
 
 
 class Message extends Component {
 
   _renderMessageOfType(type) {
     switch(type) {
+    case 'markdown':
+      return <MarkdownMessage {...this.props.message} />;
     case 'text':
       return <TextMessage {...this.props.message} />;
     case 'emoji':
