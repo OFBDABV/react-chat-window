@@ -14668,7 +14668,7 @@ var react_markdown_default = /*#__PURE__*/__webpack_require__.n(react_markdown);
 
 
 var MarkdownMessage_MarkdownMessage = function MarkdownMessage(props) {
-  return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('div', { className: 'sc-message--markdown' }, external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(react_markdown_default.a, { source: props.data.text }));
+  return external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement('div', { className: 'sc-message--markdown' }, external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(react_markdown_default.a, { source: props.data.text, linkTarget: "_blank" }));
 };
 
 /* harmony default export */ var Messages_MarkdownMessage = (MarkdownMessage_MarkdownMessage);

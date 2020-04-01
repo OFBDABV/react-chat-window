@@ -7,7 +7,7 @@ var MarkdownMessage = function MarkdownMessage(props) {
     { className: 'sc-message--markdown' },
     React.createElement(
       ReactMarkdown,
-      { source: props.data.text }
+      { source: props.data.text, linkTarget: "_blank" }
     )
   );
 };
