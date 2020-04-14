@@ -248,7 +248,7 @@ function visit(tree, test, visitor, reverse) {
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "close-icon.c30463a5.png";
+module.exports = __webpack_require__.p + "close-icon.b3ad4ffd.png";
 
 /***/ }),
 /* 8 */
