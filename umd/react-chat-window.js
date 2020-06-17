@@ -15174,7 +15174,7 @@ var UserInput_UserInput = function (_Component) {
         onKeyDown: this.handleKeyDown.bind(this),
         onKeyUp: this.handleKeyUp.bind(this),
         contentEditable: 'true',
-        placeholder: 'Write a reply...',
+        placeholder: 'Type je bericht ...',
         className: 'sc-user-input--text'
       }),
       external_root_React_commonjs2_react_commonjs_react_amd_react_default.a.createElement(

@@ -139,7 +139,7 @@ class UserInput extends Component {
           onKeyDown={this.handleKeyDown.bind(this)}
           onKeyUp={this.handleKeyUp.bind(this)}
           contentEditable="true"
-          placeholder="Write a reply..."
+          placeholder="Type je bericht ..."
           className="sc-user-input--text"
         >
         </div>
