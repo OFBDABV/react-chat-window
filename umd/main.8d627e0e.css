@@ -87,7 +87,7 @@
 }
 
 .sc-message-list {
-  height: 80%;
+  height: 100%;
   overflow-y: auto;
   background-color: white;
   background-size: 100%;
@@ -140,6 +140,7 @@
 
 .fullscreen .sc-message-list-container {
   position: relative;
+  height: 80%;
 }
 
 .fullscreen .sc-persona {
@@ -148,6 +149,7 @@
   right: 25px;
   z-index: 0;
   max-width: 30%;
+  max-height: 100%;
 }
 
 .sc-launcher {
@@ -716,3 +718,5 @@
 .sc-popup-window--search::placeholder {
   color: #C1C7CD;
 }
+
+/*# sourceMappingURL=main.8d627e0e.css.map*/
