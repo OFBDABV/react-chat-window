@@ -7,40 +7,16 @@ body {
   font-family: Avenir Next, Helvetica Neue, Helvetica,sans-serif;
 }
 
-.demo-description {
-  max-width: 500px;
+.sc-launcher {display: none;}
+.sc-chat-window {
+  right: 10px !important; 
+  bottom: 10px !important;
+  width: calc(100% - 20px) !important;
+  height: calc(100% - 20px) !important;
+  max-height: 100% !important;
 }
-
-.demo-description img {
-  max-width: 500px;
-}
-
-.demo-test-area {
-  width: 300px;
-  box-sizing: border-box;
-}
-
-.demo-test-area--text {
-  box-sizing: border-box;
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-  resize: none;
-  font-family: Avenir Next, Helvetica Neue, Helvetica,sans-serif;
-  background: #fafbfc;
-  color: #8da2b5;
-  border: 1px solid #dde5ed;
-  font-size: 16px;
-  padding: 16px 15px 14px;
-  margin: 0;
-  border-radius: 6px;
-  outline: none;
-  height: 150px;
-  margin-bottom: 10px;
-}
-
-.demo-monster-img {
-  width: 400px;
-  display: block;
-  margin: 60px auto;
-}
+.sc-header--close-button {display: none;}
+.sc-user-input--file-icon-wrapper {display: none !important;}
+.sc-header {background: #2a9ca4 !important;}
+.sc-user-input--text {width: 100% !important;}
+.sc-message {min-width: 300px; width: 70%;}

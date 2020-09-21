@@ -17,8 +17,9 @@ class Demo extends Component {
     this.state = {
       messageList: messageHistory,
       newMessagesCount: 0,
-      isOpen: false
+      isOpen: true
     };
+    this._sendMessage("Test 123")
   }
 
   _onMessageWasSent(message) {
@@ -62,12 +63,7 @@ class Demo extends Component {
   }
 
   render() {
-    return <div>
-      <Header />
-      <TestArea
-        onMessage={this._sendMessage.bind(this)}
-      />
-      <Launcher
+    return <Launcher
         agentProfile={{
           teamName: 'react-chat-window',
           imageUrl: 'https://a.slack-edge.com/66f9/img/avatars-teams/ava_0001-34.png'
@@ -78,11 +74,9 @@ class Demo extends Component {
         newMessagesCount={this.state.newMessagesCount}
         handleClick={this._handleClick.bind(this)}
         isOpen={this.state.isOpen}
+        isFullscreen={true}
         showEmoji
-      />
-      <img className="demo-monster-img" src={monsterImgUrl} />
-      <Footer />
-    </div>;
+      />;
   }
 }
 

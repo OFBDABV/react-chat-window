@@ -6,6 +6,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 import React, { Component } from 'react';
 import Message from './Messages';
+import persona from '../styles/kaja.png';
 
 var MessageList = function (_Component) {
   _inherits(MessageList, _Component);
@@ -25,12 +26,17 @@ var MessageList = function (_Component) {
 
     return React.createElement(
       'div',
-      { className: 'sc-message-list', ref: function ref(el) {
-          return _this2.scrollList = el;
-        } },
-      this.props.messages.map(function (message, i) {
-        return React.createElement(Message, { message: message, key: i });
-      })
+      { className: 'sc-message-list-container' },
+      React.createElement(
+        'div',
+        { className: 'sc-message-list', ref: function ref(el) {
+            return _this2.scrollList = el;
+          } },
+        this.props.messages.map(function (message, i) {
+          return React.createElement(Message, { message: message, key: i });
+        })
+      ),
+      React.createElement('img', { src: persona, className: 'sc-persona' })
     );
   };
 

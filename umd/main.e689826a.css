@@ -129,14 +129,27 @@
   max-height: 100%;
 }
 /* .fullscreen .sc-header--close-button {display: none;} */
-.fullscreen .sc-header--close-button {width: auto; height: 75%;}
+.fullscreen .sc-header--close-button {width: auto; height: 75%; display: none;}
 .fullscreen .sc-header--close-button img {padding: 0; width: auto; height: auto; max-height: 100%; max-width: 100%;}
 .fullscreen .sc-header--close-button:hover {background: inherit;}
 .fullscreen .sc-header--img {border-radius: 0; height: 100%;}
 .fullscreen .sc-user-input--file-icon-wrapper {display: none;}
-.fullscreen .sc-header {background: #e6f5fc; height: 75px}
+.fullscreen .sc-header {background: #2a9ca4; height: 75px}
 .fullscreen .sc-user-input--text {width: 100%;}
-.fullscreen .sc-message {min-width: 300px; width: 70%;}
+.fullscreen .sc-message {min-width: 300px; width: 70%; z-index: 100; position: relative;}
+
+.fullscreen .sc-message-list-container {
+  position: relative;
+}
+
+.fullscreen .sc-persona {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 0;
+  max-width: 30%;
+}
+
 .sc-launcher {
   width: 60px;
   height: 60px;
@@ -703,5 +716,3 @@
 .sc-popup-window--search::placeholder {
   color: #C1C7CD;
 }
-
-/*# sourceMappingURL=main.24a29fc9.css.map*/
